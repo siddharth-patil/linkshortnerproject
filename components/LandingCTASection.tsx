@@ -38,7 +38,7 @@ export function CTASection() {
                 ))}
               </div>
 
-              <SignUpButton>
+              <SignUpButton mode="modal">
                 <Button
                   size="lg"
                   className="gap-2 bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto"

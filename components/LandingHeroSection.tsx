@@ -31,7 +31,7 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <SignUpButton>
+          <SignUpButton mode="modal">
             <Button
               size="lg"
               className="gap-2 bg-blue-600 hover:bg-blue-700 text-white"
@@ -41,7 +41,7 @@ export function HeroSection() {
             </Button>
           </SignUpButton>
 
-          <SignInButton>
+          <SignInButton mode="modal">
             <Button size="lg" variant="outline">
               Sign In
             </Button>

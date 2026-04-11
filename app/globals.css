@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+/* @import '@clerk/themes/shadcn.css'; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -127,4 +128,85 @@
   html {
     @apply font-sans;
   }
+}
+
+/* Clerk Modal Text Visibility Fix */
+:is(.cl-modal, [role="dialog"]) {
+  color: #ffffff !important;
+}
+
+:is(.cl-modal, [role="dialog"]) * {
+  color: inherit;
+}
+
+/* Clerk Heading Elements */
+:is(.cl-modal, [role="dialog"]) h1,
+:is(.cl-modal, [role="dialog"]) h2,
+:is(.cl-modal, [role="dialog"]) h3,
+:is(.cl-modal, [role="dialog"]) h4,
+:is(.cl-modal, [role="dialog"]) h5,
+:is(.cl-modal, [role="dialog"]) h6 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Clerk Text/Paragraph */
+:is(.cl-modal, [role="dialog"]) p,
+:is(.cl-modal, [role="dialog"]) span,
+:is(.cl-modal, [role="dialog"]) label {
+  color: #ffffff !important;
+}
+
+/* Clerk Form Labels */
+:is(.cl-modal, [role="dialog"]) label,
+:is(.cl-modal, [role="dialog"]) [class*="label"],
+:is(.cl-modal, [role="dialog"]) .cl-label {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* Clerk Subtitle/Description Text */
+:is(.cl-modal, [role="dialog"]) .cl-subtitle,
+:is(.cl-modal, [role="dialog"]) [class*="subtitle"],
+:is(.cl-modal, [role="dialog"]) [class*="description"] {
+  color: #d1d5db !important;
+}
+
+/* Clerk Input Text */
+:is(.cl-modal, [role="dialog"]) input,
+:is(.cl-modal, [role="dialog"]) input::placeholder {
+  color: #ffffff !important;
+}
+
+:is(.cl-modal, [role="dialog"]) input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Clerk Button Text */
+:is(.cl-modal, [role="dialog"]) button {
+  color: #ffffff !important;
+}
+
+/* Clerk Error Messages */
+:is(.cl-modal, [role="dialog"]) [class*="error"],
+:is(.cl-modal, [role="dialog"]) .cl-error,
+:is(.cl-modal, [role="dialog"]) [role="alert"] {
+  color: #ef4444 !important;
+}
+
+/* Clerk Success Messages */
+:is(.cl-modal, [role="dialog"]) [class*="success"],
+:is(.cl-modal, [role="dialog"]) .cl-success {
+  color: #10b981 !important;
+}
+
+/* Clerk Links */
+:is(.cl-modal, [role="dialog"]) a,
+:is(.cl-modal, [role="dialog"]) [role="link"] {
+  color: #60a5fa !important;
+}
+
+:is(.cl-modal, [role="dialog"]) a:hover,
+:is(.cl-modal, [role="dialog"]) [role="link"]:hover {
+  color: #93c5fd !important;
 }
