@@ -112,9 +112,9 @@ This is a **Link Shortener** application built with **Next.js 16.2.2**, **React 
 4. Use `Suspense` for slow queries
 
 ### Protecting a Route
-1. Use Clerk middleware in `middleware.ts`
-2. Redirect unauthenticated users to sign-in
-3. In Server Components, call `await currentUser()` or `auth().userId`
+1. **⚠️ NEVER use `middleware.ts` — it is deprecated in Next.js 16.2.2.** Use `proxy.ts` instead for Clerk authentication.
+2. Set up Clerk auth in `proxy.ts` to handle redirects and session verification
+3. In Server Components, call `await auth()` to get `userId`
 4. Throw error if not authenticated
 
 ### Adding a New Database Table
@@ -149,6 +149,7 @@ This is a **Link Shortener** application built with **Next.js 16.2.2**, **React 
 5. **Database operations must verify user ownership** — prevent cross-user access bugs.
 6. **Server Components by default** — use `"use client"` only for interactive features.
 7. **All UI components must use shadcn/ui** — no custom button/input components.
+8. **🚨 NEVER use `middleware.ts`** — it is deprecated in Next.js 16.2.2. Use `proxy.ts` for Clerk authentication and route protection instead.
 
 ## Anti-Patterns to Avoid
 

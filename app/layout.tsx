@@ -111,7 +111,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-black text-white">
-        <ClerkProvider {...clerkTheme}>
+        <ClerkProvider {...clerkTheme} signInFallbackRedirectUrl="/dashboard" signUpFallbackRedirectUrl="/dashboard">
           <header className="border-b border-gray-800 py-4 px-6">
             <Show when="signed-out">
               <div className="flex gap-4">
